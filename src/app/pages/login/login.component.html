@@ -1,0 +1,14 @@
+<div class="login-page">
+	<div class="login-container">
+		<h1>LOAN SIMPLE</h1>
+		<div class="input-wrapper">
+			<select [ngClass]="{'has-error' : isFormSubmit && !selectedUser}" [(ngModel)]="selectedUser">
+				<option value="">Select User</option>
+				<option [ngValue]="item" *ngFor="let item of userDetails">{{item.name}}</option>
+			</select>
+		</div>
+		<div class="button-wrapper">
+			<button class="login-btn" (click)="login()">LOGIN</button>
+		</div>
+	</div>
+</div>

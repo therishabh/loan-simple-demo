@@ -1,0 +1,102 @@
+.table-section {
+  .total-results {
+    font-family: $font-light;
+    padding: 20px 0;
+
+    span {
+      font-family: $font-regular;
+    }
+  }
+
+  .table-wrapper {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+    border: 1px solid #d4d4d4;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        tr {
+          background: rgba(38, 50, 56, 0.7);
+          padding: 10px 10px;
+          color: #fff;
+          font-family: $font-semibold;
+          font-size: 14px;
+          height: 40px;
+
+          th {
+            &:first-child {
+              width: 100px;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid #c1c1c1;
+
+          &:nth-child(even) {
+            background: #fff;
+          }
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          td {
+            padding: 12px 15px;
+            font-size: 14px;
+            font-family: $font-light;
+            vertical-align: middle;
+            text-align: center;
+
+            &.operation-td {
+              padding: 0;
+              width: 210px;
+
+              a {
+                &+a {
+                  margin-left: 5px;
+                }
+              }
+
+              .operation-btn {
+                cursor: pointer;
+                font-size: 14px;
+                display: inline-block;
+                color: #fff;
+                padding: 5px 0px;
+                font-family: $font-semibold;
+                width: 70px;
+                box-shadow: 0 2px 3px #d0d0d0;
+                border-radius: 4px;
+
+                &+.operation-btn {
+                  margin-left: 5px;
+                }
+
+                &.delete {
+                  background: $error-color;
+                }
+
+                &.edit {
+                  background: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .no-result-found {
+      padding-top: 135px;
+      padding-bottom: 135px;
+      text-align: center;
+      color: #808080;
+      font-size: 18px;
+    }
+  }
+}

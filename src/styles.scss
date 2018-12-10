@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~font-awesome/css/font-awesome.css';
+@import './assets/styles/style';
+
+.main-section {
+  article {
+    .form-wrapper {
+      width: 40%;
+      margin: 0 auto;
+      margin-top: 90px;
+
+      .input-wrapper {
+        font-size: 14px;
+        font-family: $font-regular;
+
+        input {
+          width: 100%;
+          height: 40px;
+          margin-top: 5px;
+          border-radius: 4px;
+          border: 1px solid #d0d0d0;
+          padding: 0 15px;
+          transition: 0.4s all;
+
+          &:focus {
+            box-shadow: 0 0 4px 1px $primary;
+          }
+
+          &.has-error {
+            border: 1px solid $error-color;
+
+            &:focus {
+              box-shadow: 0 0 4px 1px $error-color;
+            }
+          }
+        }
+      }
+
+      .msg {
+        font-size: 15px;
+        margin-top: 5px;
+        color: $green-color;
+
+        &.error-msg {
+          color: $error-color;
+        }
+      }
+
+      .button-wrapper {
+        margin-top: 25px;
+        text-align: center;
+
+        button {
+          height: 45px;
+          width: 210px;
+          border: 0;
+          background: $primary;
+          color: #fff;
+          font-family: $font-semibold;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px #ccc;
+        }
+      }
+    }
+  }
+}
+
+
+.modal-overlay-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100000;
+
+  .bg-wrapper {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .7);
+    top: 0;
+    z-index: 100;
+  }
+
+  .modal-body-wrapper {
+    position: absolute;
+    top: 110px;
+    z-index: 101;
+    width: 500px;
+    min-height: 300px;
+    background: #fff;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    .heading-wrap {
+      background: #ddd;
+      padding: 10px 15px;
+
+      .close-btn {
+        position: absolute;
+        right: 20px;
+        font-size: 22px;
+        top: 8px;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .modal-heading {
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        font-family: $font-semibold;
+        color: #464646;
+        position: relative;
+        margin-right: 30px;
+      }
+    }
+
+    .modal-content-body {
+      h3 {
+        font-size: 24px;
+        font-family: $font-light;
+        text-align: center;
+        margin-top: 80px;
+      }
+
+      .button-wrapper {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+
+        button {
+          background: #fff;
+          box-shadow: 0 0 4px #ddd;
+          border: 1px solid #ddd;
+          font-size: 14px;
+          width: 110px;
+          height: 40px;
+          font-family: $font-semibold;
+
+          &+button {
+            margin-left: 10px;
+          }
+
+          &.delete {
+            background: $error-color;
+            color: #fff;
+
+          }
+        }
+      }
+    }
+  }
+}

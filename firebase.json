@@ -1,0 +1,11 @@
+{
+	"hosting" : {
+		"public" : "dist/loan-simple/",
+		"rewrites" : [
+			{
+				"source" : "**",
+				"destination" : "/index.html"
+			}
+		]
+	}
+}

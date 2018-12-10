@@ -1,0 +1,29 @@
+<div class="sidebar-content">
+	<div class="sidebar-user">
+		<div class="user-icon">
+			<i class="fa fa-user-circle-o"></i>
+		</div>
+		<div class="user-name">
+			{{userData.name}}
+		</div>
+	</div>
+	<div class="sidebar-category">
+		<ul>
+			<li class="navigation-header">
+				Main
+			</li>
+			<li *ngIf="userData.permissions.indexOf('product-list') > -1">
+				<a [routerLink]="['/product/']" routerLinkActive="active">
+					<i class="fa fa-product-hunt"></i>
+					<span>Product</span>
+				</a>
+			</li>
+			<li *ngIf="userData.permissions.indexOf('category-list') > -1">
+				<a [routerLink]="['/category/']" routerLinkActive="active">
+					<i class="fa fa-th-list"></i>
+					<span>Category</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

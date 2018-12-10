@@ -1,0 +1,28 @@
+#main-body-container {
+    padding-top: 48px;
+    position: relative;
+    min-height: 100%;
+    .page-container {
+        height: calc(100vh - 48px);
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        position: relative;
+        .page-content {
+            display: table-row;
+            .sidebar-wrapper {
+                display: table-cell;
+                width: 260px;
+                vertical-align: top;
+                position: relative;
+                color: #fff;
+                background: #263238;
+            }
+            .content-wrapper {
+                display: table-cell;
+                vertical-align: top;
+                width: 100%;
+            }
+        }
+    }
+}

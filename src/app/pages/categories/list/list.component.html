@@ -1,0 +1,68 @@
+<section class="main-section" id="category-list">
+	<div class="page-header">
+		<div class="page-header-content">
+			<div class="page-title">
+				<h4>Category List</h4>
+			</div>
+			<div class="right-section">
+				<a [routerLink]="['/category/new']" *ngIf="loginUser.permissions.indexOf('category-create') > -1">
+					<button>Add New</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	<article>
+		<div class="table-section">
+			<div class="total-results">
+				<div><span>{{categoryList.length}}</span> Result{{categoryList.length > 1 ? 's' : ''}} Found</div>
+			</div>
+			<div class="table-wrapper">
+				<table>
+					<thead>
+						<tr>
+							<th>S. No.</th>
+							<th>Name</th>
+							<th>Operation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let item of categoryList.slice().reverse(); let i = index;">
+							<td>{{i + 1}}</td>
+							<td>{{item.name}}</td>
+							<td class="operation-td">
+								<a [routerLink]="['/category/edit/', item.id]" *ngIf="loginUser.permissions.indexOf('category-edit') > -1">
+									<div class="edit operation-btn">Edit</div>
+								</a>
+								<a href="javascript:void(0)" (click)="deleteCategory(i)" *ngIf="loginUser.permissions.indexOf('category-delete') > -1">
+									<div class="delete operation-btn">Delete</div>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="no-result-found" *ngIf="categoryList.length == 0">
+					No Result Found
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
+
+<div class="modal-overlay-wrapper deleteModal" *ngIf="deleteModalOpen">
+	<div class="bg-wrapper" (click)="closeModal()"></div>
+	<div class="modal-body-wrapper">
+		<div class="heading-wrap">
+			<div class="modal-heading">Delete Category</div>
+			<div class="close-btn" (click)="closeModal()">
+				<i class="fa fa-times"></i>
+			</div>
+		</div>
+		<div class="modal-content-body">
+			<h3>Are you sure to delete category ?</h3>
+			<div class="button-wrapper">
+				<button (click)="closeModal()">Cancle</button>
+				<button class="delete" (click)="deleteSubmit()">Yes Delete</button>
+			</div>
+		</div>
+	</div>
+</div>

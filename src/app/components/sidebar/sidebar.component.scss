@@ -1,0 +1,83 @@
+@import './../../../assets/styles/themes/all';
+
+.sidebar-content {
+  position: fixed;
+  width: 260px;
+  max-height: 100%;
+  overflow: auto;
+  top: 48px;
+
+  .sidebar-user {
+    padding: 20px;
+    margin: 0;
+    position: relative;
+
+    .user-icon {
+      display: inline-block;
+      border-radius: 50px;
+      height: 39px;
+      width: 39px;
+      margin-top: 0px;
+      color: #e8e8e8;
+      text-align: center;
+      float: left;
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+    .user-name {
+      display: inline-block;
+      line-height: 31px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 16px;
+    }
+  }
+
+  .sidebar-category {
+    ul {
+      li {
+        display: block;
+
+        &.navigation-header {
+          min-height: 30px;
+          padding: 10px 20px;
+          border-bottom: 0;
+          text-transform: uppercase;
+          font-size: 11px;
+          line-height: 1.82;
+          color: rgba(#fff, .5);
+        }
+
+        a {
+          color: rgba(#fff, .75);
+          padding: 12px 20px;
+          font-weight: 500;
+          display: block;
+          font-family: $font-semibold;
+          font-size: 14px;
+          transition: background .15s linear, color .15s linear;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, .1);
+            color: #fff;
+          }
+
+          &.active {
+            background: $primary;
+            color: #fff;
+          }
+        }
+
+        i {
+          float: left;
+          margin-right: 15px;
+          font-size: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.page-header {
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow : 0 1px 0  #ddd;
+    border-bottom: 1px solid #ddd;
+    .page-header-content {
+        position: relative;
+        background-color: inherit;
+        padding: 0 20px;
+        .page-title {
+            padding: 20px 0;
+            display: inline-block;
+            position: relative;
+            font-size: 16px;
+            font-family: $font-regular;
+            color: #333;
+        }
+        .right-section {
+            float: right;
+            a {
+                display: block;
+                margin-top: 19px;
+                button {
+                    padding: 5px 15px;
+                    font-size: 14px;
+                    font-family: $font-semibold;
+                    color: #fff;
+                    background: $primary;
+                    border: 0;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}

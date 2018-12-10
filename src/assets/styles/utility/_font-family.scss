@@ -1,0 +1,11 @@
+//Sass for include all font family
+
+// (montserrat)
+@include font-face('montserrat-semibold', './assets/fonts/montserrat/Montserrat-SemiBold');
+@include font-face('montserrat-ultraLight', './assets/fonts/montserrat/Montserrat-UltraLight');
+@include font-face('montserrat-extraBold', './assets/fonts/montserrat/Montserrat-ExtraBold');
+@include font-face('montserrat-regular', './assets/fonts/montserrat/Montserrat-Regular');
+@include font-face('montserrat-light', './assets/fonts/montserrat/Montserrat-Light');
+@include font-face('montserrat-bold', './assets/fonts/montserrat/Montserrat-Bold');
+@include font-face('montserrat-hairline', './assets/fonts/montserrat/Montserrat-Hairline');
+@include font-face('montserrat-black', './assets/fonts/montserrat/Montserrat-Black');
